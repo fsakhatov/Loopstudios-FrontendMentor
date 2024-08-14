@@ -1,0 +1,496 @@
+:root{
+    --alata: 'Alata', sans-serif;
+    --josef: 'Josefin Sans', sans-serif;
+    --white: hsl(0, 0%, 100%);
+    --black: hsl(0, 0%, 0%);
+    --dark-gray: hsl(0, 0%, 55%);
+    --very-dark-gray: hsl(0, 0%, 41%);
+}
+*{
+    border: none;
+    outline: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-weight: unset;
+    list-style: none;
+}
+body{
+    overflow-x: hidden;
+}
+
+/*Element*/
+h1, h2{
+    font-family: var(--josef);
+    font-size: 40px;
+    text-transform: uppercase;
+}
+section{
+    margin-bottom: 4em;
+}
+
+/*Usable Class*/
+.container{
+    width: 80%;
+    margin: auto;
+}
+
+/*Navigation*/
+.navigationBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2em auto;
+    color: var(--white);
+    font-family: var(--alata);
+}
+.brand{
+    cursor: pointer;
+    font-size: 30px;
+
+}
+.navigationLink, .navigationLink > li > a{
+    display: flex;
+    gap: 1.2em;
+    color: var(--white);
+    font-family: var(--alata);
+    font-size: 15px;
+    transition-duration: 1s;
+}
+.navigationLink > li > a:hover{
+    text-decoration: underline;
+    text-underline-position: under;
+    transition: all ease-out;
+}
+
+/*Hero*/
+.heroSectionBackgroundImage{
+    background-image: url(https://i.postimg.cc/wvFrtc9K/image-hero.jpg);
+    background-size: cover;
+    padding: 1em 0em;
+    height: 650px;
+}
+.heroBoxedText{
+    max-width: 700px;
+    padding: 0.5em;
+    margin-top: 2em;
+    border: var(--white) 2px solid;
+    color: var(--white);
+    font-size: 60px;
+}
+
+/*Feautured*/
+.featured{
+    display: flex;
+}
+.featuredImage{
+    background-image: url(https://i.postimg.cc/hGL6nRwt/image-interactive.jpg);
+    width: 731px;
+    height: 500px;
+}
+.featuredPost{
+    width: 600px;
+    height: fit-content;
+    align-self: flex-end;
+    position: absolute;
+    left: 48%;
+    padding: 4em 5em;
+    background-color: var(--white);
+    font-size: 15px;
+    font-family: var(--alata);
+    color: var(--very-dark-gray);
+}
+.featuredPost > h2{
+    color: var(--black);
+    margin-bottom: 0.5em;
+}
+
+/* Post*/
+.postCard{
+    margin: 4em auto;
+    display: grid;
+    grid-template-areas: "tittle button"
+                         "post post";
+    row-gap: 2em;
+}
+.postSectionTittle{
+    grid-area: tittle;
+}
+button.controllerButton{
+    grid-area: button;
+    justify-self: end;
+    width: fit-content;
+    align-content: flex-end;
+    display: inline;
+    background-color: unset;
+    border: 2px var(--black) solid;
+    padding: 1em 2.5em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition-duration: 0.5s;
+}
+button.controllerButton:hover{
+    background-color: var(--black);
+    color: var(--white);
+    transition: all ease-out;
+}
+.gridCardPostWrapper{
+    grid-area: post;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 4em;
+}
+.gridPostCard{
+    width: 100%;
+    height: 550px;
+    display: flex;
+    color: var(--white);
+    transition-duration: 0.5s;
+}
+.gridPostCard:hover{
+    transition: ease-out all;
+    filter: grayscale(90%) brightness(1.2);
+    color: var(--black);
+}
+.postTittle{
+    align-self: flex-end;
+    padding: 1em;
+    font-size: 36px;
+    text-transform: uppercase;
+    font-family: var(--josef);
+}
+/*Post Images*/
+.imageOne, .imageTwo, .imageFour, .imageThree, .imageFive, .imageSix, .imageSeven, .imageEight{
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    object-fit: cover;
+}
+.imageOne{
+    background-image: url(https://i.postimg.cc/KjqCW7W7/image-deep-earth.jpg);
+}
+.imageTwo{
+    background-image: url(https://i.postimg.cc/MpjgsQmR/image-night-arcade.jpg);
+}
+.imageThree{
+    background-image: url(https://i.postimg.cc/V6zTLHQB/image-soccer-team.jpg);
+}
+.imageFour{
+    background-image: url(https://i.postimg.cc/X7qRChZs/image-grid.jpg);
+}
+.imageFive{
+    background-image: url(https://i.postimg.cc/s2dqbgTL/image-from-above.jpg);
+}
+.imageSix{
+    background-image: url(https://i.postimg.cc/HsNf42Xd/image-pocket-borealis.jpg);
+}
+.imageSeven{
+    background-image: url(https://i.postimg.cc/RhVjGpgV/image-curiosity.jpg);
+}
+.imageEight{
+    background-image: url(https://i.postimg.cc/qB1fg07t/image-fisheye.jpg);
+}
+
+/*Footer*/
+.footer{
+    background-color: var(--black);
+    padding: 2em 4em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.footerLink, .footerLink > a{
+    display: flex;
+    gap: 1.2em;
+    color: var(--white);
+    font-family: var(--alata);
+    font-size: 15px;
+    transition-duration: 1s;
+}
+.footerLink > a:hover{
+    text-decoration: underline;
+    text-underline-position: under;
+    transition: all ease-out;
+}
+.quickLink, .socialLink{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    color: var(--white);
+    font-family: var(--alata);
+}
+.socialIcon{
+    align-self: flex-end;
+    display: flex;
+    gap: 1em;
+    transition-duration: 0.5s;
+    cursor: pointer;
+}
+.socialIcon:hover{
+    text-decoration: underline;
+    text-underline-position: under;
+    transition: all ease-out;
+}
+.copy{
+    color: var(--dark-gray);
+}
+
+.mobileNavToggle{
+    display: none;
+}
+
+@media screen and (min-width: 320px) and (max-width: 768px) {
+    /*Element*/
+    h2{
+        font-size: 25px;
+    }
+    
+    /*Navigation*/
+    .brand{
+        position: relative;
+        z-index: 10;
+    }
+    .navigationLink{
+        display: none;
+        position: absolute;
+        inset: 0 0 0 0;
+        transform: translateX(100%);
+        justify-content: center;
+        background-color: var(--black);
+        flex-direction: column;
+        gap: 1.2em;
+        z-index: 2;
+        transition: 1s;
+    }
+    .navigationLink[data-visible="true"]{
+        transform: translateX(0%);
+        display: flex;
+    }
+    .navigationLink > li > a{
+        font-size: 30px;
+        font-family: var(--josef);
+        margin-left: 1em;
+        text-transform: uppercase;
+    }
+    .mobileNavToggle{
+        cursor: pointer;
+        display: block;
+        z-index: 4;
+        white-space: pre;
+        aspect-ratio: 1;
+        width: 1.2rem;
+        background-image: url(https://i.postimg.cc/jS539J6v/icon-hamburger.png);
+        background-color: transparent;
+        background-repeat: no-repeat;
+    }
+    .mobileNavToggle[aria-expanded="true"]{
+        background: url(https://i.postimg.cc/3RMLdSsb/icon-close.png);
+        background-repeat: no-repeat;
+    }
+    
+    /*Hero*/
+    .heroSectionBackgroundImage{ 
+        background-image: url(https://i.postimg.cc/T3p5BRKn/image-hero.jpg);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+    }
+    .heroBoxedText{
+        justify-self: center;
+        margin: 0;
+        font-size: 32px;
+        width: fit-content;
+    }
+    
+    /*Featured*/
+    .featured{ 
+        flex-direction: column;
+        gap: 2em;
+    }
+    .featuredPost{
+        position: relative;
+        left: unset;
+        margin: auto;
+        padding: 1em;
+        text-align: center;
+        width: 80vw;
+        height: fit-content;
+    }
+    .featuredImage{
+        background-image: url(https://i.postimg.cc/X7NCcK3H/image-interactive.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 80vw;
+        max-width: 654px;
+        height: 448px;
+    }
+    
+    /*Post*/
+    .postCard{
+        grid-template-areas: "tittle"
+                             "post"
+                             "button";
+        justify-content: center;
+    }
+    .postSectionTittle, button.controllerButton{
+        justify-self: center;
+    }
+    .gridCardPostWrapper{
+        grid-template-columns: 1fr;
+        gap: 1em;
+    }
+    .gridPostCard{
+        width: 80vw;
+        height: fit-content;
+    }
+    .postTittle{
+        margin-top: 2em;
+        font-size: 20px;
+    }
+    /*Post Images*/
+    .imageOne, .imageTwo, .imageFour, .imageFive, .imageSix, .imageSeven, .imageEight{
+        background-position: center;
+    }
+    .imageOne{
+        background-image: url(https://i.postimg.cc/nL979HZn/image-deep-earth.jpg);
+    }
+    
+    .imageTwo{
+        background-image: url(https://i.postimg.cc/4yPhRyvQ/image-night-arcade.jpg);
+    }
+    
+    .imageThree{
+        background-image: url(https://i.postimg.cc/SNZzZXxy/image-soccer-team.jpg);
+    }
+    
+    .imageFour{
+        background-image: url(https://i.postimg.cc/fLx95BJF/image-grid.jpg);
+    }
+    
+    .imageFive{
+        background-image: url(https://i.postimg.cc/T1fWsgbP/image-from-above.jpg);
+    }
+    
+    .imageSix{
+        background-image: url(https://i.postimg.cc/dQjCyNMZ/image-pocket-borealis.jpg);
+    }
+    
+    .imageSeven{
+        background-image: url(https://i.postimg.cc/Z5MpqWGf/image-curiosity.jpg);
+    }
+    
+    .imageEight{
+        background-image: url(https://i.postimg.cc/V6ytj3Ln/image-fisheye.jpg);
+    }
+
+    /*Footer*/
+    .footer{
+        flex-direction: column;
+        gap: 2em;
+        padding: 2em 1em;
+
+    }
+    .quickLink{
+        flex-direction: column;
+    }
+    .footerLink{
+        flex-direction: column;
+        align-items: center;
+    }
+    .socialIcon{
+        align-self: center;
+    }
+}
+
+@media screen and (min-width:768px) and (max-width: 1440px){
+    h2{
+        font-family: var(--josef);
+        font-size: 30px;
+        text-transform: uppercase;
+    }
+
+    .heroBoxedText{
+        font-size: 40px;
+    }
+
+    /*Featured*/
+    .featured{ 
+        flex-direction: column;
+        gap: 2em;
+    }
+    .featuredPost{
+        position: relative;
+        left: unset;
+        margin: auto;
+        padding: 1em;
+        text-align: center;
+        width: 80vw;
+        height: fit-content;
+    }
+    .featuredImage{
+        background-image: url(https://i.postimg.cc/X7NCcK3H/image-interactive.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        width: 80vw;
+        height: 448px;
+    }
+
+    /*Post*/
+    .gridCardPostWrapper{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1em;
+    }
+    .postSectionTittle{
+        align-self: center;
+    }
+    .postTittle{
+        font-size: 25px;
+    }
+    .gridPostCard{
+        width: 100%;
+        height: fit-content;
+    }
+    .postTittle{
+        margin-top: 2em;
+        font-size: 20px;
+    }
+    /*Post Images*/
+    .imageOne, .imageTwo, .imageFour, .imageFive, .imageSix, .imageSeven, .imageEight{
+        background-position: center;
+    }
+    .imageOne{
+        background-image: url(https://i.postimg.cc/nL979HZn/image-deep-earth.jpg);
+    }
+    
+    .imageTwo{
+        background-image: url(https://i.postimg.cc/4yPhRyvQ/image-night-arcade.jpg);
+    }
+    
+    .imageThree{
+        background-image: url(https://i.postimg.cc/SNZzZXxy/image-soccer-team.jpg);
+    }
+    
+    .imageFour{
+        background-image: url(https://i.postimg.cc/fLx95BJF/image-grid.jpg);
+    }
+    
+    .imageFive{
+        background-image: url(https://i.postimg.cc/T1fWsgbP/image-from-above.jpg);
+    }
+    
+    .imageSix{
+        background-image: url(https://i.postimg.cc/dQjCyNMZ/image-pocket-borealis.jpg);
+    }
+    
+    .imageSeven{
+        background-image: url(https://i.postimg.cc/Z5MpqWGf/image-curiosity.jpg);
+    }
+    
+    .imageEight{
+        background-image: url(https://i.postimg.cc/V6ytj3Ln/image-fisheye.jpg);
+    }
+}
